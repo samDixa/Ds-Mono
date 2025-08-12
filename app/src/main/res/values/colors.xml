@@ -3,4 +3,12 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+
+    <color name="my_status_color">#213D3E</color>
+
+    <color name="app_main_color0">#8AA1A7</color>
+    <color name="app_main_color2">#167173</color>
+    <color name="app_main_color3">#182C47</color>
+    <color name="app_main_color4">#8ED108</color>
+    <color name="app_main_text_color">#243335</color>
 </resources>

@@ -1,26 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:scrollbars="none"
+    android:background="@color/app_main_color0"
+    android:orientation="vertical"
+    android:padding="16dp"
     tools:context="com.example.demo_chesto.MainActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <include layout="@layout/layout_bluetooth"/> <!--Bluetooth-->
-        <include layout="@layout/layout_ecg"/>       <!--ECG-->
-        <include layout="@layout/layout_spo2"/>      <!--SPO2-->
-        <include layout="@layout/layout_temp"/>      <!--TEMP-->
-        <include layout="@layout/layout_nibp"/>      <!--NIBP-->
-        <include layout="@layout/layout_about"/>     <!--ABOUT-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/date_and_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="time"
+                android:textColor="@color/app_main_text_color"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="90dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:text="Berry Monitor"
+                android:textColor="@color/app_main_text_color"
+                android:textSize="26dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/start_monitor_momo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/home_btn_bg"
+                android:paddingTop="26dp"
+                android:paddingBottom="28dp"
+                android:text="Text Monitor"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/online_monitor_momo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/home_btn_bg"
+                android:paddingTop="26dp"
+                android:paddingBottom="28dp"
+                android:text="Online Monitor"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp" />
+
+
+        </LinearLayout>
+
+
+        <!--        user profile show-->
+        <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="60dp"
+            app:cardBackgroundColor="#167173"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:weightSum="2">
+
+                <!-- Profile Pic -->
+                <LinearLayout
+                    android:id="@+id/profile_pic_container"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/circle_bg"
+
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/sample_user" />
+                </LinearLayout>
+
+                <!-- User Info -->
+                <LinearLayout
+                    android:id="@+id/user_info_container"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.3"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/user_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="User Id:"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name:"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/user_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email:"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
 
     </LinearLayout>
-</ScrollView>
+
+</LinearLayout>
